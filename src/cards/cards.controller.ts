@@ -12,7 +12,9 @@ import { CardsService } from './cards.service';
 import { User } from '../decorators/user.decorator';
 import { CreateCardDto } from './dto/create-card.dto';
 import { AuthGuard } from '../guards/auth.guard';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('cards')
 @UseGuards(AuthGuard)
 @Controller('cards')
 export class CardsController {
